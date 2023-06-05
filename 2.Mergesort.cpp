@@ -4,7 +4,7 @@
 
 using namespace std;
 
-int merge(int a[],int low,int mid,int high){
+void merge(int a[],int low,int mid,int high){
     int i,j,k,b[20];
     i=low,j=mid+1,k=low;
     while(i<=mid && j<=high){
