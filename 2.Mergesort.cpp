@@ -81,6 +81,6 @@ for(i=10000;i<=100000;i+=2000){
         file<<n<<"\t"<<t<<"\n";
         file.close();
     }
-   cout<<"\nTime to sort 10000 to 100000 (incrementing 2000 per iteration) element is added to the file quicksort.txt ";
+   cout<<"\nTime to sort 10000 to 100000 (incrementing 2000 per iteration) element is added to the file mergesort.txt ";
    return 0;
 }
