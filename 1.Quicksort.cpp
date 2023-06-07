@@ -34,7 +34,7 @@ void quicksort(int a[],int l,int h){
 }
 
 int main(){
-int n, a[1000],i,j;
+int n, a[100000],i,j;
 cout<<"Enter the Number of Elements to be sorted :";
 cin>>n;
 cout<<"The Random numbers are :"; 
