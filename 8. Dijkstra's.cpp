@@ -5,15 +5,17 @@ void dijkstra(int n, int source, int cost[10][10], int distance[])
 {
     int i, v, u, visited[10], min, count = 2;
     for (i = 1; i <= n; i++)
-        visited[i] = 0, distance[i] = cost[source][i];
+        visited[i] = 0;
+    distance[i] = cost[source][i];
     while (count <= n)
     {
         min = 999;
         for (u = 1; u <= n; u++)
             if (distance[u] < min && !visited[u])
-                min = distance[u], v = u;
-        visited[v] = 1;
-        count++;
+                min = distance[u];
+                v = u;
+               visited[v] = 1;
+               count++;
         for (u = 1; u <= n; u++)
             if ((distance[v] + cost[v][u] < distance[u]) && !visited[u])
                 distance[u] = distance[v] + cost[v][u];
