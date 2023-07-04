@@ -7,7 +7,7 @@
 
 void createGraph(int adj[MAX][MAX], int n)
 {
-    printf("Enter Adj Matrix: (999 for inf)\n ");
+    printf("Enter Adj Matrix: (999 for infinity)\n ");
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n; j++)
@@ -39,7 +39,7 @@ void printGraph(int adj[MAX][MAX], int n)
         for (int j = 0; j < n; j++)
         {
             if (adj[i][j] == INF)
-                printf("INF ");
+                printf("Infinity");
             else
                 printf("%d ", adj[i][j]);
         }
