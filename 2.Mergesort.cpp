@@ -46,9 +46,9 @@ void mergesort(int a[], int low, int high){
  
 int main()
 {
-	int n, i, a[100000];
-	cout<<"Enter the Number of Element to be sorted : ";
-	cin>>n;
+	   int n, i, a[100000];
+	   cout<<"Enter the Number of Element to be        sorted : ";
+   	cin>>n;
     cout<<"The Random numbers are :"; 
     for(i=0;i<n;i++){
     a[i]=rand()%1000;
