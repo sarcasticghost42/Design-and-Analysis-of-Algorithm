@@ -6,7 +6,7 @@
 
 #define min(x,y) (((x)>(y) ? y: x))
 
-//int min(int a, int b) {
+// int min(int a, int b) {
 //     int min = (a<b) ? a : b;
 //     return min;
 // }
