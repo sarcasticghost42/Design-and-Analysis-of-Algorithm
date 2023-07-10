@@ -3,11 +3,17 @@
 
 #define MAX 10
 #define INF 999
+
 #define min(x,y) (((x)>(y) ? y: x))
+
+// int min(int a, int b) {
+//     int min = (a<b) ? a : b;
+//     return min;
+// }
 
 void createGraph(int adj[MAX][MAX], int n)
 {
-    printf("Enter Adj Matrix: (999 for infinity)\n ");
+    printf("Enter Adj Matrix: (999 for inf)\n ");
     for (int i = 0; i < n; i++)
     {
         for (int j = 0; j < n; j++)
@@ -19,17 +25,30 @@ void createGraph(int adj[MAX][MAX], int n)
 
 void floyd(int adj[MAX][MAX], int n)
 {
-    for (int i = 0; i < n; i++)
+    for (int k = 0; k < n; k++)
     {
-        for (int j = 0; j < n; j++)
+        for (int i = 0; i < n; i++)
         {
-            for (int k = 0; k < n; k++)
+            for (int j = 0; j < n; j++)
             {
-                adj[j][k] = min(adj[j][k], adj[j][i] + adj[i][k]);
+                adj[i][j] = min(adj[i][j], (adj[i][k] + adj[k][j]));
             }
         }
     }
 }
+// void floyd(int adj[MAX][MAX], int n)
+// {
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             for (int k = 0; k < n; k++)
+//             {
+//                 adj[j][k] = min(adj[j][k], adj[j][i] + adj[i][k]);
+//             }
+//         }
+//     }
+// }
 
 void printGraph(int adj[MAX][MAX], int n)
 {
@@ -39,7 +58,7 @@ void printGraph(int adj[MAX][MAX], int n)
         for (int j = 0; j < n; j++)
         {
             if (adj[i][j] == INF)
-                printf("Infinity");
+                printf("INF ");
             else
                 printf("%d ", adj[i][j]);
         }
