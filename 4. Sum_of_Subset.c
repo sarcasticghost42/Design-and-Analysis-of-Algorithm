@@ -8,7 +8,7 @@ void display(int count)
     int i;
     printf("{");
     for (i = 0; i < count; i++)
-        printf("%d", set[i]);
+        printf(" %d ", set[i]);
     printf("}");
 }
 
