@@ -17,17 +17,30 @@ void createGraph(int adj[MAX][MAX], int n)
 
 void warshlAlgo(int adj[MAX][MAX], int n)
 {
-    for (int i = 0; i < n; i++)
+    for (int k = 0; k < n; k++)
     {
-        for (int j = 0; j < n; j++)
+        for (int i = 0; i < n; i++)
         {
-            for (int k = 0; k < n; k++)
+            for (int j = 0; j < n; j++)
             {
-                adj[j][k] = adj[j][k] || (adj[j][i] && adj[i][k]);
+                adj[i][j] = adj[i][j] || (adj[i][k] && adj[k][j]);
             }
         }
     }
 }
+// void warshlAlgo(int adj[MAX][MAX], int n)
+// {
+//     for (int i = 0; i < n; i++)
+//     {
+//         for (int j = 0; j < n; j++)
+//         {
+//             for (int k = 0; k < n; k++)
+//             {
+//                 adj[j][k] = adj[j][k] || (adj[j][i] && adj[i][k]);
+//             }
+//         }
+//     }
+// }
 
 void printGraph(int adj[MAX][MAX], int n)
 {
